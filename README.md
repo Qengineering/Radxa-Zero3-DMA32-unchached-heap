@@ -26,8 +26,7 @@ sudo reboot
 ```
 To hold the kernel packages so they aren't automatically upgraded.
 ```bash
-sudo apt-mark hold linux-image-6.1.0-rk356x
-sudo apt-mark hold linux-headers-6.1.0-rk356x
+sudo apt-mark hold linux-image-6.1.0-1027-rockchip
 ```
 Test:
 ```bash
