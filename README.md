@@ -26,6 +26,7 @@ sudo reboot
 ```
 To hold the kernel packages so they aren't automatically upgraded.
 ```bash
+dpkg --list | grep linux-image
 sudo apt-mark hold linux-image-6.1.0-1027-rockchip
 ```
 Test:
