@@ -31,7 +31,8 @@ sudo apt-mark hold linux-image-6.1.0-1027-rockchip
 Better to enlarge the CMA (Contiguous Memory Allocator).
 ```bash
 sudo nano /boot/extlinux/extlinux.config
-# in append line cma=256M@0x20000000 
+# in append:
+cma=256M@0x20000000 
 ```
 Test:
 ```bash
