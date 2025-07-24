@@ -1,6 +1,5 @@
-# Radxa Zero3 DMA32 unchached heap
-Zero3 DMA32 heap deb packages
-Use these packages to create an uncahched 32-bit DMA heap. 
+# Radxa Zero3 4 GB RAM limit
+Zero3 4 GB RAM deb packages
 The Rockchip RGA library only works with Radxa Zero 3 devices with 4 GB or less RAM. 
 Above 4 GB, you are facing:
 - DMA memory mapping issues:
@@ -28,6 +27,11 @@ To hold the kernel packages so they aren't automatically upgraded.
 ```bash
 dpkg --list | grep linux-image
 sudo apt-mark hold linux-image-6.1.0-1027-rockchip
+```
+Better to enlarge the CMA (Contiguous Memory Allocator).
+```bash
+sudo nano /boot/extlinux/extlinux.config
+# in append line cma=256M@0x20000000 
 ```
 Test:
 ```bash
